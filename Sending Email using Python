@@ -1,0 +1,14 @@
+import smtplib  # Import the smtplib module to enable email sending capabilities
+
+# Create a connection to Gmail's SMTP server using port 587
+server = smtplib.SMTP('smtp.gmail.com', 587)
+
+server.starttls()  # Upgrade the connection to a secure, encrypted TLS connection
+
+# Log in to your Gmail account with your email address and password (or App Password)
+server.login('mrpriyesh037@gmail.com', 'oguc ytlj fiyy kshn')
+
+# Send an email from 'mrpriyesh037@gmail.com' to 'singhhpr7@gmail.com' with the body 'how are you'
+server.sendmail('mrpriyesh037@gmail.com', 'singhhpr7@gmail.com', 'how are you')
+
+print('mail sent successfully')  # Print a confirmation message that the email was sent
